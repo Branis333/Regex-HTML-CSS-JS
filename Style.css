@@ -63,7 +63,6 @@ button:hover {
     margin-top: 20px;
 }
 
-Branis Sumba, Now
 document.getElementById('eventRegistrationForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
 
