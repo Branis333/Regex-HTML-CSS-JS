@@ -38,3 +38,20 @@ document.getElementById('eventRegistrationForm').addEventListener('submit', func
     } else {
         document.getElementById('eventDateError').textContent = '';
     }
+
+    // Tickets validation
+    const tickets = document.getElementById('tickets').value;
+    if (tickets < 1 || tickets > 10) {
+        isValid = false;
+        document.getElementById('ticketsError').textContent = 'Number of tickets must be between 1 and 10.';
+    } else {
+        document.getElementById('ticketsError').textContent = '';
+    }
+
+    // Display success message if form is valid
+    if (isValid) {
+        document.getElementById('successMessage').textContent = 'Registration successful!';
+    } else {
+        document.getElementById('successMessage').textContent = '';
+    }
+});
